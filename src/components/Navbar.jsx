@@ -11,17 +11,13 @@ function NavBar() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <img
-                  className="h-8 w-8"
-                  src={Logo}
-                  alt="Workflow"
-                />
+                <img className="h-8 w-8" src={Logo} alt="Workflow" />
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <a
                     href="#"
-                    className=" hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium"
+                    className="hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Dashboard
                   </a>
@@ -41,6 +37,11 @@ function NavBar() {
                   </a>
                 </div>
               </div>
+            </div>
+            <div className="flex items-center">
+              <button className="mr-auto  items-center justify-center px-4 py-2 border border-transparent rounded-md text-sm font-medium text-white bg-black hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hidden md:block">
+              Obtener contenido premium -{">"}
+              </button>
             </div>
             <div className="-mr-2 flex md:hidden">
               <button
@@ -88,7 +89,6 @@ function NavBar() {
             </div>
           </div>
         </div>
-
         <Transition
           show={isOpen}
           enter="transition ease-out duration-100 transform"
@@ -121,7 +121,11 @@ function NavBar() {
                 >
                   Projects
                 </a>
-
+                <div className="flex items-center">
+                  <button className="mr-auto  items-center justify-center px-4 py-2 border border-transparent rounded-md text-sm font-medium text-white bg-black hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Obtener contenido premium -{">"}
+                  </button>
+                </div>
               </div>
             </div>
           )}
