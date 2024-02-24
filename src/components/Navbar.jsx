@@ -19,27 +19,13 @@ function NavBar() {
                     href="#"
                     className="hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Dashboard
-                  </a>
-
-                  <a
-                    href="#"
-                    className="hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Team
-                  </a>
-
-                  <a
-                    href="#"
-                    className="hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Projects
+                    Inicio
                   </a>
                 </div>
               </div>
             </div>
             <div className="flex items-center">
-              <button className="mr-auto  items-center justify-center px-4 py-2 border border-transparent rounded-md text-sm font-medium text-white bg-black hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hidden md:block">
+              <button className="mr-auto  items-center justify-center px-4 py-2 border border-transparent rounded-md text-sm font-medium text-white bg-black hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2  hidden md:block">
               Obtener contenido premium -{">"}
               </button>
             </div>
@@ -105,24 +91,11 @@ function NavBar() {
                   href="#"
                   className="hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Dashboard
+                  Inicio
                 </a>
 
-                <a
-                  href="#"
-                  className="hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Team
-                </a>
-
-                <a
-                  href="#"
-                  className="hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Projects
-                </a>
                 <div className="flex items-center">
-                  <button className="mr-auto  items-center justify-center px-4 py-2 border border-transparent rounded-md text-sm font-medium text-white bg-black hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  <button className="mr-auto  items-center justify-center px-4 py-2 border border-transparent rounded-md text-sm font-medium text-white bg-black  focus:outline-none focus:ring-2 focus:ring-offset-2 ">
                     Obtener contenido premium -{">"}
                   </button>
                 </div>
