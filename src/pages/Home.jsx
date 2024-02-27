@@ -2,8 +2,15 @@ import Navbar from "../components/Navbar";
 import HomeImage from "../assets/home-image.jpg";
 
 import "../assets/css/home.css";
+import Footer from "../components/Footer";
+
+import { Link } from "react-router-dom";
 
 const Home = () => {
+  const redirectToPremium = () => {
+    window.location.href = "/pricing";
+  };
+
   return (
     <>
       <Navbar />
@@ -34,8 +41,9 @@ const Home = () => {
           <div className="scroll"></div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center">
-          <div className="w-full sm:lg:w-1/2 md:w-1/3 bg-zinc-100 rounded-xl p-5 m-5">
+        {/* center div */}
+        <div className="flex flex-col md:flex-row justify-center md:items-stretch items-center">
+          <div className="flex-grow w-full sm:lg:w-1/2 md:w-1/3 bg-zinc-100 rounded-xl p-5 m-5">
             <p className="text-xl font-bold text-center mb-5">
               Días de la semana
             </p>
@@ -53,7 +61,7 @@ const Home = () => {
               Aprende los días de la semana en lenguaje de señas.
             </p>
           </div>
-          <div className="w-full sm:lg:w-1/2 md:w-1/3 bg-zinc-100 rounded-xl p-5 m-5">
+          <div className="flex-grow w-full sm:lg:w-1/2 md:w-1/3 bg-zinc-100 rounded-xl p-5 m-5">
             <p className="text-xl font-bold text-center mb-5">Números</p>
             <iframe
               width="560"
@@ -69,7 +77,7 @@ const Home = () => {
               Aprende los números en lenguaje de señas.
             </p>
           </div>
-          <div className="w-full sm:lg:w-1/2 md:w-1/3  bg-zinc-100 rounded-xl p-5 m-5">
+          <div className="flex-grow w-full sm:lg:w-1/2 md:w-1/3  bg-zinc-100 rounded-xl p-5 m-5">
             <p className="text-xl font-bold text-center mb-5">Vehiculos</p>
             <iframe
               width="560"
@@ -85,6 +93,14 @@ const Home = () => {
               Aprende los vehículos en lenguaje de señas.
             </p>
           </div>
+        </div>
+
+        <div className="max-w-2xl mt-10 mb-5">
+          <p className="text-2xl text-center text-zinc-700">
+            Ahora que conoces algunas palabras, te invitamos a conocer el
+            abecedario completo, para que puedas formar tus propias palabras y
+            comunicarte con el lenguaje de señas.
+          </p>
         </div>
 
         <div className="w-full sm:lg:w-2/3 bg-zinc-100 rounded-xl p-5 m-5">
@@ -105,7 +121,20 @@ const Home = () => {
             Aprende el abecedario en lenguaje de señas.
           </p>
         </div>
+
+        <div className="max-w-2xl mt-10 mb-5">
+          <p className="text-2xl text-center text-zinc-700">
+            ¿Quieres más contenido? Presiona el botón para obtener contenido
+            premium.
+          </p>
+          <div className="flex justify-center mt-8">
+            <button className="px-4 py-2 border border-transparent rounded-md text-sm font-medium text-white bg-black hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2  hidden md:block" onClick={redirectToPremium}>
+              Obtener contenido premium -{">"}
+            </button>
+          </div>
+        </div>
       </div>
+      <Footer />
     </>
   );
 };

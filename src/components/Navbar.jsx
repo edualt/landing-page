@@ -3,6 +3,10 @@ import { Transition } from "@headlessui/react";
 import Logo from "../assets/logo.png";
 
 function NavBar() {
+  const redirectToPremium = () => {
+    window.location.href = "/pricing";
+  };
+
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
@@ -16,7 +20,7 @@ function NavBar() {
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <a
-                    href="#"
+                    href="/"
                     className="hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Inicio
@@ -25,7 +29,7 @@ function NavBar() {
               </div>
             </div>
             <div className="flex items-center">
-              <button className="mr-auto  items-center justify-center px-4 py-2 border border-transparent rounded-md text-sm font-medium text-white bg-black hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2  hidden md:block">
+              <button className="mr-auto  items-center justify-center px-4 py-2 border border-transparent rounded-md text-sm font-medium text-white bg-black hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2  hidden md:block" onClick={redirectToPremium}>
               Obtener contenido premium -{">"}
               </button>
             </div>
